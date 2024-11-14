@@ -1,6 +1,6 @@
-const clicker = document.getElementById("PressableButton")
-let score = document.getElementById("score")
+let score = 0;
 
-clicker.addEventListener("click", function () {
-    score += 1
+document.getElementById("buttonPress").addEventListener("click", () => {
+    score++;
+    document.getElementById("score").innerText = score;
 });
