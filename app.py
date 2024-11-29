@@ -18,3 +18,18 @@ def function_db():
     conn.close
 
 function_db()
+
+
+@app.route('/save-score', methods=['POST'])
+def save_score():
+    data = request.json
+    player_name = data['player_name']
+    score = data['score']
+
+    conn = sqlite3.connect("scores.db")
+    c = conn.cursor()
+    c. execute("INSERT INTO scores (player_name, score) VALUES (?, ?)", (player_name, score))
+    conn.commit()
+    conn.close()
+
+    return jsonify({"message": "Score saved"}), 201
