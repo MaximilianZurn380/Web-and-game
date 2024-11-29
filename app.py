@@ -33,3 +33,8 @@ def save_score():
     conn.close()
 
     return jsonify({"message": "Score saved"}), 201
+
+
+@app.route('/')
+def index():
+    return app.run(debug=True)
