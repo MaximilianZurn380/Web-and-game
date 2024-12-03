@@ -37,7 +37,13 @@ def save_score():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    conn = sqlite3.connect("scores.db")
+    c = conn.cursor()
+    c.execute("SELECT player_name, score FROM scores ORDER BY score DESC LIMIT 10")
+    scores = c.fetchall()
+    conn.close()
+
+    return render_template('index.html', scores = scores)
 
 if __name__ == '__main__':
     app.run(debug=True)

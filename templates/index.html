@@ -14,5 +14,14 @@
         <p>Score: <span id="score">0</span></p>
         <button id="saveScore">Save score</button>
     </div>
+
+    <div>
+        <h1>High Scores</h1>
+        <ul id="scoreList">
+            {% for player_name, score in scores %}
+                <li>{{ player_name }}: {{ score }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
