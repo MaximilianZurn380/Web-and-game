@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webside</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
     <script src="../static/game.js" defer></script>
 </head>
 <body>
-    <div>
+    <div id="topmenu">
         <p>Enter your name: <input type="text" id="playerName"/></p>
         <button id="buttonPress">Klikk</button>
         <p>Score: <span id="score">0</span></p>
         <button id="saveScore">Save score</button>
     </div>
 
-    <div>
+    <div id="scoreColor">
         <h1>High Scores</h1>
         <ul id="scoreList">
             {% for player_name, score in scores %}

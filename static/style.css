@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#topmenu {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin: -0.52rem;
+}
+
+#scoreColor {
+    margin: -0.5rem;
+    padding-left: 1rem;
+}

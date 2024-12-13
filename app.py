@@ -12,8 +12,6 @@ charset = "utf8mb4",
 collation = "utf8mb4_general_ci"
 )
 
-#mycursor = mydb.cursor()
-
 #def function_db():
  #   conn = get_connection()
   #  cursor = conn.cursor()
